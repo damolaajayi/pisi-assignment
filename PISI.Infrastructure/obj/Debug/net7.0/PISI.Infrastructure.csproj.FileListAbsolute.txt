@@ -1,0 +1,17 @@
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\bin\Debug\net7.0\PISI.Infrastructure.deps.json
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\bin\Debug\net7.0\PISI.Infrastructure.dll
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\bin\Debug\net7.0\PISI.Infrastructure.pdb
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\bin\Debug\net7.0\PISI.Application.dll
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\bin\Debug\net7.0\PISI.Domain.dll
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\bin\Debug\net7.0\PISI.Application.pdb
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\bin\Debug\net7.0\PISI.Domain.pdb
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\obj\Debug\net7.0\PISI.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\obj\Debug\net7.0\PISI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\obj\Debug\net7.0\PISI.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\obj\Debug\net7.0\PISI.Infrastructure.AssemblyInfo.cs
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\obj\Debug\net7.0\PISI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\obj\Debug\net7.0\PISI.Infrastructure.csproj.CopyComplete
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\obj\Debug\net7.0\PISI.Infrastructure.dll
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\obj\Debug\net7.0\refint\PISI.Infrastructure.dll
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\obj\Debug\net7.0\PISI.Infrastructure.pdb
+C:\Users\Hp840g5\source\repos\PISI.Infrastructure\obj\Debug\net7.0\ref\PISI.Infrastructure.dll
