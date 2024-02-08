@@ -31,7 +31,7 @@ namespace PISI.Infrastructure.Context
             if (optionsBuilder != null && !optionsBuilder.IsConfigured)
             {
 
-                optionsBuilder.UseMySQL(_configuration.GetConnectionString("DbConfig")); ;
+                optionsBuilder.UseMySQL(_configuration.GetSection("ConnectionStrings").GetValue<string>("DbConfig"));
             }
         }
 
@@ -42,7 +42,14 @@ namespace PISI.Infrastructure.Context
             {
                 entity.HasKey(e => e.Id);
             });
-
+            modelBuilder.Entity<ServiceUser>().HasData(new ServiceUser
+            {
+                Id = 1,
+                ServiceId = "ID-2345",
+                Password = "W@ke123",
+                CreatedBy = "ID-2345",
+                DateCreated = DateTime.Now,
+            });
             modelBuilder.Entity<Subscribe>(entity =>
             {
                 entity.HasKey(e => e.Id);

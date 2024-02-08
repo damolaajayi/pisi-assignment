@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "a5KyMduZmS+OIkHwy2jCNjFPzFnomnotc7CrPKrMj39XEZCgBj6gDX6WU6w0g5isl4+RytE4LpdG80b/+BBDjg==",
+  "dgSpecHash": "qfMYFs5GBSKRFmlPLphXIq7YhPdl4oDscWKjrTZsG7UpwkjsHsAey4PKKMX4s00EMy/5Ahyn3b9WUQExTJbDUA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Application\\PISI.Application.csproj",
+  "projectFilePath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Application\\PISI.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Hp840g5\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\Hp840g5\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\Hp840g5\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\Hp840g5\\.nuget\\packages\\google.protobuf\\3.5.1\\google.protobuf.3.5.1.nupkg.sha512",
     "C:\\Users\\Hp840g5\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",
     "C:\\Users\\Hp840g5\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.10\\microsoft.entityframeworkcore.abstractions.7.0.10.nupkg.sha512",
@@ -12,6 +15,7 @@
     "C:\\Users\\Hp840g5\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Hp840g5\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\Hp840g5\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Hp840g5\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.3\\microsoft.extensions.configuration.binder.7.0.3.nupkg.sha512",
     "C:\\Users\\Hp840g5\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Hp840g5\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Hp840g5\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",

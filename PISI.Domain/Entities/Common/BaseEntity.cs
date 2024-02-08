@@ -19,6 +19,6 @@ namespace PISI.Domain.Entities.Common
         public DateTimeOffset? DateUpdated { get; set; }
 
         [StringLength(50)]
-        public string UpdatedBy { get; set; }
+        public string? UpdatedBy { get; set; }
     }
 }

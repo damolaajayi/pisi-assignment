@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace PISI.Application.Services.Subscription
@@ -61,6 +62,7 @@ namespace PISI.Application.Services.Subscription
             var sub = new Subscribe();
             try
             {
+                var checknumber = FormatMobileNumber("234", subscribeDto.phoneNumber, 10);
                 var getsubscription = await _subscribeRepo.GetByExpressionAsync(x => x.PhoneNumber == subscribeDto.phoneNumber, token);
                 if (getsubscription != null) 
                 {
@@ -71,6 +73,8 @@ namespace PISI.Application.Services.Subscription
                 sub.PhoneNumber = subscribeDto.phoneNumber;
                 sub.ServiceId = subscribeDto.ServiceId;
                 sub.IsSubcribed = true;
+                sub.CreatedBy = subscribeDto.ServiceId;
+                sub.DateCreated = DateTime.Now;
                 _subscribeRepo.Create(sub);
                 if (await _subscribeRepo.CompleteAsync() > 0)
                 {
@@ -127,6 +131,37 @@ namespace PISI.Application.Services.Subscription
                 response.ResponseMessage = $"user unsubscription failed: {ex}";
                 response.ResponseCode = 500;
                 return response;
+            }
+        }
+        
+
+        private static string FormatMobileNumber(string CountryIsd, string MobileNumber, int Length)
+        {
+            if (!string.IsNullOrEmpty(MobileNumber))
+            {
+                string VMobileNumber = MobileNumber.Trim();
+                VMobileNumber = VMobileNumber.Replace("+", "");
+                VMobileNumber = VMobileNumber.Replace(" ", "");
+                string ExPrefix = CountryIsd + "0";
+                if (VMobileNumber.Length == Length)
+                {
+                    VMobileNumber = CountryIsd + VMobileNumber;
+                }
+                else if (VMobileNumber.Length > Length)
+                {
+                    int tail_length = Length;
+                    VMobileNumber = VMobileNumber.Substring(VMobileNumber.Length - tail_length);
+                    VMobileNumber = CountryIsd + VMobileNumber;
+                }
+                else
+                {
+                    VMobileNumber = CountryIsd + VMobileNumber;
+                }
+                return VMobileNumber;
+            }
+            else
+            {
+                return MobileNumber;
             }
         }
     }

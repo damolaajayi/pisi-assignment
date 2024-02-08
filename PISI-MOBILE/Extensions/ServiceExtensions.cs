@@ -1,11 +1,16 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using PISI.Application.Services.Service;
+using PISI.Application.Services.Subscription;
 using PISI.Application.Services.TokenService;
+using PISI.Application.Validators;
 using PISI.Domain.Interfaces.IRepository;
 using PISI.Domain.Interfaces.Service;
+using PISI.Domain.Interfaces.Subscription;
 using PISI.Domain.Interfaces.Token;
+using PISI.Domain.Models.Service;
 using PISI.Infrastructure.Context;
 using PISI.Infrastructure.Repositories.Service;
 using PISI.Infrastructure.Repositories.Subcription;
@@ -15,7 +20,7 @@ namespace PISI_MOBILE.Extensions
     public static class ServiceExtensions
     {
         public static void ConfigureSqlContext(this IServiceCollection services, IConfiguration configuration) =>
-            services.AddDbContext<PISIDbContext>(opts => opts.UseMySQL(configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<PISIDbContext>(opts => opts.UseMySQL(configuration.GetConnectionString("DbConfig")));
         public static void ConfigureSubscribeRepo(this IServiceCollection services) =>
             services.AddScoped<ISubscribeRepository, SubscribeRepository>();
         public static void ConfigureServiceRepo(this IServiceCollection services) =>
@@ -23,7 +28,7 @@ namespace PISI_MOBILE.Extensions
         public static void ConfigureTokenService(this IServiceCollection services) =>
         services.AddScoped<ITokenService, TokenService>();
         public static void ConfigureSubscribeService(this IServiceCollection services) =>
-            services.AddScoped<ISubscribeRepository, SubscribeRepository>();
+            services.AddScoped<ISubscription, SubscriptionService>();
         public static void ConfigureService(this IServiceCollection services) =>
         services.AddScoped<IService, Service>();
 
@@ -33,6 +38,11 @@ namespace PISI_MOBILE.Extensions
         {
             return builder.UseMiddleware<JwtMiddleware>();
         }
+
+        public static void ConfigureSubscribeValidator(this IServiceCollection services) =>
+            services.AddValidatorsFromAssemblyContaining<SubscribeValidator>(ServiceLifetime.Transient);
+        public static void ConfigureLoginValidator(this IServiceCollection services) =>
+        services.AddValidatorsFromAssemblyContaining<LogInValidator>(ServiceLifetime.Transient);
 
         public static void ConfigureSwaggerGen(this IServiceCollection services) =>
             services.AddSwaggerGen(c =>

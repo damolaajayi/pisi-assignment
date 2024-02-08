@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp840g5\\source\\repos\\PISI-MOBILE\\PISI-MOBILE.csproj": {}
+    "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI-MOBILE\\PISI-MOBILE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp840g5\\source\\repos\\PISI-MOBILE\\PISI-MOBILE.csproj": {
+    "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI-MOBILE\\PISI-MOBILE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp840g5\\source\\repos\\PISI-MOBILE\\PISI-MOBILE.csproj",
+        "projectUniqueName": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI-MOBILE\\PISI-MOBILE.csproj",
         "projectName": "PISI-MOBILE",
-        "projectPath": "C:\\Users\\Hp840g5\\source\\repos\\PISI-MOBILE\\PISI-MOBILE.csproj",
+        "projectPath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI-MOBILE\\PISI-MOBILE.csproj",
         "packagesPath": "C:\\Users\\Hp840g5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp840g5\\source\\repos\\PISI-MOBILE\\obj\\",
+        "outputPath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI-MOBILE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,14 +33,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Hp840g5\\source\\repos\\PISI.Application\\PISI.Application.csproj": {
-                "projectPath": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Application\\PISI.Application.csproj"
+              "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Application\\PISI.Application.csproj": {
+                "projectPath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Application\\PISI.Application.csproj"
               },
-              "C:\\Users\\Hp840g5\\source\\repos\\PISI.Domain\\PISI.Domain.csproj": {
-                "projectPath": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Domain\\PISI.Domain.csproj"
+              "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Domain\\PISI.Domain.csproj": {
+                "projectPath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Domain\\PISI.Domain.csproj"
               },
-              "C:\\Users\\Hp840g5\\source\\repos\\PISI.Infrastructure\\PISI.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Infrastructure\\PISI.Infrastructure.csproj"
+              "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Infrastructure\\PISI.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Infrastructure\\PISI.Infrastructure.csproj"
               }
             }
           }
@@ -55,6 +55,20 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
             "MySql.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.10, )"
@@ -87,14 +101,14 @@
         }
       }
     },
-    "C:\\Users\\Hp840g5\\source\\repos\\PISI.Application\\PISI.Application.csproj": {
+    "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Application\\PISI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Application\\PISI.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Application\\PISI.Application.csproj",
         "projectName": "PISI.Application",
-        "projectPath": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Application\\PISI.Application.csproj",
+        "projectPath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Application\\PISI.Application.csproj",
         "packagesPath": "C:\\Users\\Hp840g5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Application\\obj\\",
+        "outputPath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -116,8 +130,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Hp840g5\\source\\repos\\PISI.Domain\\PISI.Domain.csproj": {
-                "projectPath": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Domain\\PISI.Domain.csproj"
+              "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Domain\\PISI.Domain.csproj": {
+                "projectPath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Domain\\PISI.Domain.csproj"
               }
             }
           }
@@ -132,9 +146,21 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[7.0.3, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
@@ -169,14 +195,14 @@
         }
       }
     },
-    "C:\\Users\\Hp840g5\\source\\repos\\PISI.Domain\\PISI.Domain.csproj": {
+    "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Domain\\PISI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Domain\\PISI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Domain\\PISI.Domain.csproj",
         "projectName": "PISI.Domain",
-        "projectPath": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Domain\\PISI.Domain.csproj",
+        "projectPath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Domain\\PISI.Domain.csproj",
         "packagesPath": "C:\\Users\\Hp840g5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -210,6 +236,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
             "MySql.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.10, )"
@@ -235,14 +269,14 @@
         }
       }
     },
-    "C:\\Users\\Hp840g5\\source\\repos\\PISI.Infrastructure\\PISI.Infrastructure.csproj": {
+    "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Infrastructure\\PISI.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Infrastructure\\PISI.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Infrastructure\\PISI.Infrastructure.csproj",
         "projectName": "PISI.Infrastructure",
-        "projectPath": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Infrastructure\\PISI.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Infrastructure\\PISI.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Hp840g5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -264,8 +298,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Hp840g5\\source\\repos\\PISI.Application\\PISI.Application.csproj": {
-                "projectPath": "C:\\Users\\Hp840g5\\source\\repos\\PISI.Application\\PISI.Application.csproj"
+              "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Application\\PISI.Application.csproj": {
+                "projectPath": "C:\\Users\\Hp840g5\\Desktop\\pisi-assignment\\PISI.Application\\PISI.Application.csproj"
               }
             }
           }
@@ -280,9 +314,33 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.3.0, )"
             },
             "MySql.EntityFrameworkCore": {
               "target": "Package",

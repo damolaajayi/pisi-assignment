@@ -13,6 +13,8 @@ builder.Services.ConfigureSubscribeService();
 builder.Services.ConfigureService();
 builder.Services.ConfigureTokenService();
 builder.Services.ConfigureHttpContext();
+builder.Services.ConfigureSubscribeValidator();
+builder.Services.ConfigureLoginValidator();
 
 
 var app = builder.Build();

@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using PISI.Domain.Interfaces.IRepository;
 using PISI.Domain.Interfaces.Token;
 using PISI.Domain.Models.Service;
+using PISI.Domain.Models.Token;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -29,11 +30,12 @@ namespace PISI.Application.Services.TokenService
             throw new NotImplementedException();
         }
 
-        public async Task<string> CreateToken(LoginDto login)
+        public async Task<GetTokenModel> CreateToken(LoginDto login)
         {
+            var tokenresponse = new GetTokenModel();
             try
             {
-                var getokenexpiry = await _serviceRepository.Get(1, new CancellationToken());
+                //var getokenexpiry = await _serviceRepository.Get(1, new CancellationToken());
                 var tokenHandler = new JwtSecurityTokenHandler();
                 var tokenKey = Encoding.UTF8.GetBytes(_configuration["JWT:Key"]);
                 var tokenDescriptor = new SecurityTokenDescriptor
@@ -42,13 +44,15 @@ namespace PISI.Application.Services.TokenService
                     { 
                         new Claim("serviceId", login.ServiceId)
                     }),
-                    Expires = DateTime.UtcNow.AddDays(getokenexpiry.TokenExpiry),
+                    Expires = DateTime.UtcNow.AddDays(7),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)
                 };
                 var token = tokenHandler.CreateJwtSecurityToken(tokenDescriptor);
 
                 var jwtToken = tokenHandler.WriteToken(token);
-                return jwtToken;
+                tokenresponse.Token = jwtToken;
+                tokenresponse.TokenExpiry = DateTime.UtcNow.AddDays(7);
+                return tokenresponse;
                 
             }
             catch (Exception ex)

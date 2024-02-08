@@ -1,4 +1,5 @@
-﻿using PISI.Domain.Interfaces.Service;
+﻿using PISI.Domain.Interfaces.IRepository;
+using PISI.Domain.Interfaces.Service;
 using PISI.Domain.Interfaces.Token;
 using PISI.Domain.Models.Service;
 using System;
@@ -12,9 +13,11 @@ namespace PISI.Application.Services.Service
     public class Service : IService
     {
         private readonly ITokenService _tokenService;
-        public Service(ITokenService tokenService)
+        private readonly IServiceRepository _serviceRepository;
+        public Service(ITokenService tokenService, IServiceRepository serviceRepository)
         {
             _tokenService = tokenService;
+            _serviceRepository = serviceRepository;
         }
 
         public Task<ResponseDto> CheckTokenExpiry(LoginDto login)
@@ -27,18 +30,19 @@ namespace PISI.Application.Services.Service
             var response = new ResponseDto();
             try
             {
-                var serviceId = login.ServiceId.ToLower();
-                var password = login.Password.ToLower();
-                if(serviceId == password)
+                var serviceId = await _serviceRepository.GetByExpressionAsync(x => x.ServiceId == login.ServiceId && x.Password == login.Password, new CancellationToken());
+                if(serviceId != null)
                 {
                     var token = await _tokenService.CreateToken(login);
+                    serviceId.TokenExpiry = token.TokenExpiry;
+                    await _serviceRepository.UpdateAsync(serviceId);
                     response.ResponseMessage = "Login successful";
                     response.ResponseCode = 200;
-                    response.Data = token;
+                    response.Data = token.Token;
                 }
                 else
                 {
-                    response.ResponseCode = 400;
+                    response.ResponseCode = 401;
                     response.ResponseMessage = "Service Id and password does not match";
                 }
             }
